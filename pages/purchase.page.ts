@@ -3,8 +3,7 @@ import { expect } from '@playwright/test';
 
 export class Purchase {
   private readonly page: Page;
-//   private readonly addToCart: string = 'button[id="add-to-cart-sauce-labs-backpack"]';
-  private readonly selectCart: string = 'a[id="shopping_cart_container"]'; // Changed to 'a'
+  private readonly selectCart: string = 'a[id="shopping_cart_container"]';
   private readonly selectCheckout: string = 'button[id="checkout"]';
   private readonly firstName: string = 'input[id="first-name"]';
   private readonly lastName: string = 'input[id="last-name"]';

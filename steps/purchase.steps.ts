@@ -2,10 +2,6 @@ import { Then } from '@cucumber/cucumber';
 import { getPage } from '../playwrightUtilities';
 import { Purchase } from '../pages/purchase.page';
 
-// Then('I will add the backpack to the cart for purchase', async () => {
-//   await new Purchase(getPage()).addBackPackToCart();
-// });
-
 Then('I will Select the cart (top-right)', async () => {
   await new Purchase(getPage()).selectCart1();
 });
