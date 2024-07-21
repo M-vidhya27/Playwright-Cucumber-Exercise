@@ -4,13 +4,13 @@ let browser: Browser | null = null;
 let page: Page | null = null;
 const DEFAULT_TIMEOUT = 30000;
 
-export const initializeBrowser = async () => {
+export const initializeBrowser = async (): Promise<void>  => {
   if (!browser) {
     browser = await chromium.launch({ headless: false });
   }
 };
 
-export const initializePage = async () => {
+export const initializePage = async (): Promise<void>  => {
   if (browser && !page) {
     page = await browser.newPage();
     page.setDefaultTimeout(DEFAULT_TIMEOUT);
@@ -24,7 +24,7 @@ export const getPage = (): Page => {
   return page;
 };
 
-export const closeBrowser = async () => {
+export const closeBrowser = async (): Promise<void>  => {
   if (browser) {
     await browser.close();
     browser = null;
